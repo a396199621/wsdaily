@@ -32,7 +32,7 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/robfig/cron"
 	"gopkg.in/yaml.v2"
-)
+)1
 
 type User struct {
 	name   string /* 姓名 */
