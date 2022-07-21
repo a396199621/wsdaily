@@ -1085,7 +1085,6 @@ func update() {
  * @return {*}
  */
 func main() {
-	update()
 	if !checkFileIsExist("./conf.yaml") {
 		newConf()
 		log4go("配置文件不存在", "ERROR").Println(`已生成配置文件,请按规则配置参数,配置完成后重启应用.`)
