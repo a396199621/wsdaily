@@ -182,6 +182,7 @@ func newConf() {
 
 	dungeonData := []DungeonData{
 		{Dungeon:"天龙寺(困难)",Player:""},
+		{Dungeon:"温府",Player:""},
 		{Dungeon:"血刀门",Player:""},
 		{Dungeon:"古墓派(简单)",Player:""},
 		{Dungeon:"古墓派(困难)",Player:""},
@@ -632,7 +633,7 @@ Loop:
 						if strings.Contains(level, "武帝") || strings.Contains(level, "武神") {
 							write(ws, `tm 回家自闭,jh fam 0 start,go west,go west,go north,go enter,go west,xiulian`)
 						} else {
-							write(ws, `tm 开始挖矿,wakuang`)
+							write(ws, `tm 开始打坐,jh fam 0 start,go south,go south,go east,go east,go east,go north,dazuo`)
 						}
 						waitcmd(ws, "close", 2000)
 						break Loop
@@ -648,7 +649,7 @@ Loop:
 					if strings.Contains(level, "武帝") || strings.Contains(level, "武神") {
 						write(ws, `tm 回家自闭,jh fam 0 start,go west,go west,go north,go enter,go west,xiulian`)
 					} else {
-						write(ws, `tm 开始挖矿,wakuang`)
+						write(ws, `tm 开始打坐,jh fam 0 start,go south,go south,go east,go east,go east,go north,dazuo`)
 					}
 					waitcmd(ws, "close", 2000)
 					break Loop
@@ -739,7 +740,7 @@ Loop:
 						if strings.Contains(level, "武帝") || strings.Contains(level, "武神") {
 							write(ws, `tm 回家自闭,jh fam 0 start,go west,go west,go north,go enter,go west,xiulian`)
 						} else {
-							write(ws, `tm 开始挖矿,wakuang`)
+							write(ws, `tm 开始打坐,jh fam 0 start,go south,go south,go east,go east,go east,go north,dazuo`)
 						}
 						waitcmd(ws, "close", 2000)
 						break Loop
@@ -934,7 +935,7 @@ Loop:
 							if strings.Contains(level, "武帝") || strings.Contains(level, "武神") {
 								write(ws, `tm 回家自闭,jh fam 0 start,go west,go west,go north,go enter,go west,xiulian`)
 							} else {
-								write(ws, `tm 开始挖矿,wakuang`)
+								write(ws, `tm 开始打坐,jh fam 0 start,go south,go south,go east,go east,go east,go north,dazuo`)
 							}
 							waitcmd(ws, "close", 2000)
 							break Loop
@@ -979,7 +980,7 @@ Loop:
 							if strings.Contains(level, "武帝") || strings.Contains(level, "武神") {
 								write(ws, `tm 回家自闭,jh fam 0 start,go west,go west,go north,go enter,go west,xiulian`)
 							} else {
-								write(ws, `tm 开始挖矿,wakuang`)
+								write(ws, `tm 开始打坐,jh fam 0 start,go south,go south,go east,go east,go east,go north,dazuo`)
 							}
 							waitcmd(ws, "close", 2000)
 							break Loop
@@ -1084,7 +1085,6 @@ func update() {
  * @return {*}
  */
 func main() {
-	update()
 	if !checkFileIsExist("./conf.yaml") {
 		newConf()
 		log4go("配置文件不存在", "ERROR").Println(`已生成配置文件,请按规则配置参数,配置完成后重启应用.`)

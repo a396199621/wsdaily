@@ -278,6 +278,7 @@ var buyNpcS = map[string]BuyNpc{
 
 var fbcr = map[string]string{
 	"云梦沼泽":"cr cd/yunmeng/senlin 0",
+	"温府":"cr cd/wen/damen 0",
 	"天龙寺(困难)":"cr tianlong/damen 1",
 	"血刀门":"cr xuedao/shankou 0",
 	"古墓派(简单)":"cr gumu/gumukou 0",
